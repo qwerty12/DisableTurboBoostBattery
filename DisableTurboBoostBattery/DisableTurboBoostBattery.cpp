@@ -17,8 +17,6 @@
 
 #define super IOService
 
-#include <IOKit/IOLib.h>
-
 OSDefineMetaClassAndStructors(DisableTurboBoostBattery, IOService)
 
 void DisableTurboBoostBattery::startPM(IOService *provider)
@@ -54,7 +52,7 @@ void DisableTurboBoostBattery::stopPM()
 }
 
 bool DisableTurboBoostBattery::_powerSourcePublished(void * target, __unused void * refCon,
-													 IOService * newService, IONotifier * notifier)
+						     IOService * newService, IONotifier * notifier)
 {
 	return ((DisableTurboBoostBattery *)target)->powerSourcePublished(newService, notifier);
 }
@@ -63,33 +61,34 @@ bool DisableTurboBoostBattery::powerSourcePublished(IOService *newService, IONot
 {
 	pPowerSource = (IOPMPowerSource *)newService;
 
-	this->powerStateNotifier = pPowerSource->registerInterest(gIOGeneralInterest, DisableTurboBoostBattery::_powerSourceStateChanged, this);
+	this->powerStateNotifier = pPowerSource->registerInterest(gIOGeneralInterest, DisableTurboBoostBattery::_powerSourceStateChanged,
+								  this);
 	notifier->remove();
 	actOnChangedPowerState();
 
 	return true;
 }
 
-IOReturn DisableTurboBoostBattery::setPowerState (unsigned long whichState, __unused IOService * whatDevice)
+IOReturn DisableTurboBoostBattery::setPowerState(unsigned long whichState, __unused IOService * whatDevice)
 {
 	if (whichState == 0) {
 		enable_tb();
-        isOnAC = !isOnAC;
+		isOnAC = !isOnAC;
 	}
 
 	return kIOPMAckImplied;
 }
 
 IOReturn DisableTurboBoostBattery::_powerSourceStateChanged(void * target, __unused void * refCon,
-															UInt32 messageType, IOService * provider,
-															void * messageArgument, vm_size_t argSize)
+							    UInt32 messageType, IOService * provider,
+							    void * messageArgument, vm_size_t argSize)
 {
 	return ((DisableTurboBoostBattery *)target)->powerSourceStateChanged(messageType, provider,
-																		 messageArgument, argSize);
+									     messageArgument, argSize);
 }
 
 IOReturn DisableTurboBoostBattery::powerSourceStateChanged(UInt32 messageType, __unused IOService * provider,
-														   __unused void * messageArgument, __unused vm_size_t argSize)
+							   __unused void * messageArgument, __unused vm_size_t argSize)
 {
 	if (messageType == kIOPMMessageBatteryStatusHasChanged)
 		actOnChangedPowerState();
