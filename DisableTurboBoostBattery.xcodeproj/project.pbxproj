@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43ABBED316F34F9200E6B037 /* DisableTurboBoost.c in Sources */ = {isa = PBXBuildFile; fileRef = 43ABBED216F34F9200E6B037 /* DisableTurboBoost.c */; };
+		43ABBED716F355AE00E6B037 /* DisableTurboBoost.h in Headers */ = {isa = PBXBuildFile; fileRef = 43ABBED616F355AE00E6B037 /* DisableTurboBoost.h */; };
+		43DD892116F28EB600A7C634 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43DD891F16F28EB600A7C634 /* InfoPlist.strings */; };
+		43DD892416F28EB600A7C634 /* DisableTurboBoostBattery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43DD892316F28EB600A7C634 /* DisableTurboBoostBattery.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43ABBED216F34F9200E6B037 /* DisableTurboBoost.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DisableTurboBoost.c; sourceTree = "<group>"; };
+		43ABBED616F355AE00E6B037 /* DisableTurboBoost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisableTurboBoost.h; sourceTree = "<group>"; };
+		43DD891716F28EB600A7C634 /* DisableTurboBoostBattery.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisableTurboBoostBattery.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DD891B16F28EB600A7C634 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		43DD891E16F28EB600A7C634 /* DisableTurboBoostBattery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DisableTurboBoostBattery-Info.plist"; sourceTree = "<group>"; };
+		43DD892016F28EB600A7C634 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43DD892216F28EB600A7C634 /* DisableTurboBoostBattery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisableTurboBoostBattery.h; sourceTree = "<group>"; };
+		43DD892316F28EB600A7C634 /* DisableTurboBoostBattery.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DisableTurboBoostBattery.cpp; sourceTree = "<group>"; };
+		43DD892516F28EB600A7C634 /* DisableTurboBoostBattery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DisableTurboBoostBattery-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43DD891216F28EB600A7C634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43DD890C16F28EB600A7C634 = {
+			isa = PBXGroup;
+			children = (
+				43DD891C16F28EB600A7C634 /* DisableTurboBoostBattery */,
+				43DD891916F28EB600A7C634 /* Frameworks */,
+				43DD891816F28EB600A7C634 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43DD891816F28EB600A7C634 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43DD891716F28EB600A7C634 /* DisableTurboBoostBattery.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43DD891916F28EB600A7C634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43DD891A16F28EB600A7C634 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43DD891A16F28EB600A7C634 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43DD891B16F28EB600A7C634 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		43DD891C16F28EB600A7C634 /* DisableTurboBoostBattery */ = {
+			isa = PBXGroup;
+			children = (
+				43DD892316F28EB600A7C634 /* DisableTurboBoostBattery.cpp */,
+				43DD892216F28EB600A7C634 /* DisableTurboBoostBattery.h */,
+				43ABBED216F34F9200E6B037 /* DisableTurboBoost.c */,
+				43ABBED616F355AE00E6B037 /* DisableTurboBoost.h */,
+				43DD891D16F28EB600A7C634 /* Supporting Files */,
+			);
+			path = DisableTurboBoostBattery;
+			sourceTree = "<group>";
+		};
+		43DD891D16F28EB600A7C634 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43DD891E16F28EB600A7C634 /* DisableTurboBoostBattery-Info.plist */,
+				43DD891F16F28EB600A7C634 /* InfoPlist.strings */,
+				43DD892516F28EB600A7C634 /* DisableTurboBoostBattery-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		43DD891316F28EB600A7C634 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43ABBED716F355AE00E6B037 /* DisableTurboBoost.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		43DD891616F28EB600A7C634 /* DisableTurboBoostBattery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43DD892816F28EB600A7C634 /* Build configuration list for PBXNativeTarget "DisableTurboBoostBattery" */;
+			buildPhases = (
+				43DD891116F28EB600A7C634 /* Sources */,
+				43DD891216F28EB600A7C634 /* Frameworks */,
+				43DD891316F28EB600A7C634 /* Headers */,
+				43DD891416F28EB600A7C634 /* Resources */,
+				43DD891516F28EB600A7C634 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DisableTurboBoostBattery;
+			productName = DisableTurboBoostBattery;
+			productReference = 43DD891716F28EB600A7C634 /* DisableTurboBoostBattery.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43DD890D16F28EB600A7C634 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 43DD891016F28EB600A7C634 /* Build configuration list for PBXProject "DisableTurboBoostBattery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43DD890C16F28EB600A7C634;
+			productRefGroup = 43DD891816F28EB600A7C634 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43DD891616F28EB600A7C634 /* DisableTurboBoostBattery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43DD891416F28EB600A7C634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DD892116F28EB600A7C634 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		43DD891516F28EB600A7C634 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43DD891116F28EB600A7C634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DD892416F28EB600A7C634 /* DisableTurboBoostBattery.cpp in Sources */,
+				43ABBED316F34F9200E6B037 /* DisableTurboBoost.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43DD891F16F28EB600A7C634 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43DD892016F28EB600A7C634 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43DD892616F28EB600A7C634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		43DD892716F28EB600A7C634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43DD892916F28EB600A7C634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DisableTurboBoostBattery/DisableTurboBoostBattery-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "DisableTurboBoostBattery/DisableTurboBoostBattery-Info.plist";
+				MODULE_NAME = pk.qwerty12.DisableTurboBoostBattery;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		43DD892A16F28EB600A7C634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DisableTurboBoostBattery/DisableTurboBoostBattery-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "DisableTurboBoostBattery/DisableTurboBoostBattery-Info.plist";
+				MODULE_NAME = pk.qwerty12.DisableTurboBoostBattery;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43DD891016F28EB600A7C634 /* Build configuration list for PBXProject "DisableTurboBoostBattery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43DD892616F28EB600A7C634 /* Debug */,
+				43DD892716F28EB600A7C634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43DD892816F28EB600A7C634 /* Build configuration list for PBXNativeTarget "DisableTurboBoostBattery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43DD892916F28EB600A7C634 /* Debug */,
+				43DD892A16F28EB600A7C634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43DD890D16F28EB600A7C634 /* Project object */;
+}
