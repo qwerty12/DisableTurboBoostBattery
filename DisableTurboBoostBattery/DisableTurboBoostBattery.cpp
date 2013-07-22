@@ -1,14 +1,24 @@
-//Copyright (C) 2013 qwerty12
-//License: http://www.gnu.org/licenses/gpl.html GPL version 2
+/*
+ *
+ * Copyright (C) 2013 Faheem Pervez. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License version
+ * 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301, USA.
+ *
+ */
 
-//Butchered work pretty much entirely taken from/based on code from:
-//
-//  NoSleepExtensionPower.cpp
-//  NoSleepKext
-//
-//  Created by Pavel Prokofiev on 2/17/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
-//
+//Based heavily on code by Pavel Prokofiev's NoSleep. Copyright 2012. All rights reserved.
 
 #include "DisableTurboBoostBattery.h"
 #include "DisableTurboBoost.h"
@@ -40,7 +50,7 @@ void DisableTurboBoostBattery::startPM(IOService *provider)
 
 void DisableTurboBoostBattery::stopPM()
 {
-	if(powerStateNotifier) {
+	if (powerStateNotifier) {
 		powerStateNotifier->remove();
 		powerStateNotifier = NULL;
 	}
@@ -85,7 +95,7 @@ IOReturn DisableTurboBoostBattery::powerSourceStateChanged(UInt32 messageType, _
 
 void DisableTurboBoostBattery::actOnChangedPowerState()
 {
-	if(pPowerSource && isOnAC != pPowerSource->externalChargeCapable() && pPowerSource->batteryInstalled()) {
+	if (pPowerSource && isOnAC != pPowerSource->externalChargeCapable() && pPowerSource->batteryInstalled()) {
 		if ((isOnAC = pPowerSource->externalChargeCapable()))
 			enable_tb();
 		else

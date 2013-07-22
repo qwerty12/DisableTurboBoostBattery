@@ -1,14 +1,24 @@
-//Copyright (C) 2013 qwerty12
-//License: http://www.gnu.org/licenses/gpl.html GPL version 2
+/*
+ *
+ * Copyright (C) 2013 Faheem Pervez. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License version
+ * 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301, USA.
+ *
+ */
 
-//Butchered work pretty much entirely taken from/based on code from:
-//
-//  NoSleepExtensionPower.cpp
-//  NoSleepKext
-//
-//  Created by Pavel Prokofiev on 2/17/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
-//
+//Based heavily on code by Pavel Prokofiev's NoSleep. Copyright 2012. All rights reserved.
 
 #ifndef __DisableTurboBoostBattery__
 #define __DisableTurboBoostBattery__
@@ -47,8 +57,7 @@ private:
                                              UInt32 messageType, IOService * provider,
                                              void * messageArgument, vm_size_t argSize);
 
-	virtual IOReturn setPowerState (unsigned long whichState, __unused IOService * whatDevice);
-
+	virtual IOReturn setPowerState(unsigned long whichState, __unused IOService * whatDevice);
 };
 
 #endif //__DisableTurboBoostBattery__
